@@ -1,0 +1,37 @@
+.searchBar {
+    margin-bottom: 16px;
+  }
+  
+  .input {
+    width: 100%;
+    margin-right: 20px;
+    padding: 8px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--text-light);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  }
+
+  .searchBar {
+    margin-bottom: 16px;
+    max-width: 518px; /* Limit the width of the search bar */
+    width: 100%; /* Ensure it takes up available space within the max-width */
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* Dark mode styles */
+  .searchBar.dark .input {
+    background-color: #34495e;
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+  }
+  
+  .searchBar.dark .input:focus {
+    border-color: var(--primary-color);
+  }

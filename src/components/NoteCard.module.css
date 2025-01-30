@@ -1,0 +1,55 @@
+.noteCard {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.noteCard.dark {
+  background-color: var(--background-dark);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+.noteCard h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.noteCard p {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.noteCard small {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.noteCard.dark small {
+  color: #ccc;
+}
+
+.noteCard button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.noteCard button:hover {
+  background-color: #2980b9;
+}
+  .noteCard {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .noteCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
