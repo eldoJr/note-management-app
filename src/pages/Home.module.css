@@ -21,13 +21,13 @@
   .searchAndAddContainer {
     display: flex;
     align-items: center;
-    gap: 30px; /* Increased gap from 16px to 24px */
+    gap: 30px; 
     margin-bottom: 16px;
   }
   
   .searchBar {
-    flex: 1; /* Allow the SearchBar to take up remaining space */
-    max-width: auto; /* Limit the width of the SearchBar */
+    flex: 1;
+    max-width: auto; 
   }
   
   .addNoteButton:hover {
@@ -41,7 +41,7 @@
   .searchContainer {
     margin-bottom: 16px;
     padding-right: 17px;
-    justify-content: center; /* Center the search bar */
+    justify-content: center; 
   }
   
   .notesList {

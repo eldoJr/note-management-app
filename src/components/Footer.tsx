@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTheme } from '../context/ThemeContext'; // Adjust the import path as needed
-import styles from './Footer.module.css'; // Import CSS Module
+import { useTheme } from '../context/ThemeContext';
+import styles from './Footer.module.css'; 
 
 const Footer = () => {
   const { theme } = useTheme(); // Get the current theme

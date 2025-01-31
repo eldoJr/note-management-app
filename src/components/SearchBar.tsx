@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { useTheme } from '../context/ThemeContext'; // Adjust the import path as needed
-import styles from './SearchBar.module.css'; // Import CSS Module
+import { useTheme } from '../context/ThemeContext';
+import styles from './SearchBar.module.css'; 
 
 type SearchBarProps = {
-  onSearch: (query: string) => void; // Function to handle search
+  onSearch: (query: string) => void; 
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const { theme } = useTheme(); // Get the current theme
+  const { theme } = useTheme();
   const [query, setQuery] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    onSearch(value); // Trigger search as the user types
+    onSearch(value); 
   };
 
   return (
