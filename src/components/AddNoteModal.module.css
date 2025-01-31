@@ -17,7 +17,7 @@
     border-radius: 8px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(59, 125, 211, 0.1);
   }
   
   .modalContent.dark {
@@ -33,7 +33,7 @@
   
   .input,
   .textarea {
-    width: 100%;
+    width: 96%;
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid var(--border-light);

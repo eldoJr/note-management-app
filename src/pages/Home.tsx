@@ -28,6 +28,10 @@ const Home = () => {
     setSearchQuery(query);
   };
 
+  const handleDeleteNote = (id: number) => {
+    setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id)); // Remove the note with the given id
+  };
+
   const filteredNotes = notes.filter(
     (note) =>
       note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -36,15 +40,15 @@ const Home = () => {
 
   return (
     <div className={`${styles.home} ${theme === 'dark' ? styles.dark : ''}`}>
-      <button className={styles.addNoteButton} onClick={() => setIsModalOpen(true)}>
-        Add Note
-      </button>
-      <div className={styles.searchContainer}>
+      <div className={styles.searchAndAddContainer}>
         <SearchBar onSearch={handleSearch} />
+        <button className={styles.addNoteButton} onClick={() => setIsModalOpen(true)}>
+          Add Note
+        </button>
       </div>
       <div className={styles.notesList}>
         {filteredNotes.map((note) => (
-          <NoteCard key={note.id} note={note} onDelete={(id) => console.log(`Delete note ${id}`)} />
+          <NoteCard key={note.id} note={note} onDelete={handleDeleteNote} />
         ))}
       </div>
       <AddNoteModal

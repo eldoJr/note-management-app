@@ -3,9 +3,9 @@
   }
   
   .input {
-    width: 100%;
+    width: 94.9%;
     margin-right: 20px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid var(--border-light);
     border-radius: 4px;
     font-size: 1rem;
@@ -16,8 +16,8 @@
 
   .searchBar {
     margin-bottom: 16px;
-    max-width: 518px; /* Limit the width of the search bar */
-    width: 100%; /* Ensure it takes up available space within the max-width */
+    max-width: 518px; 
+    width: 100%;
   }
   
   .input:focus {
