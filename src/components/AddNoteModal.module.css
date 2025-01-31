@@ -1,15 +1,13 @@
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's above other content */
-  }
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px; 
+}
   
   .modalContent {
     background-color: white;
@@ -86,3 +84,27 @@
   .cancelButton:hover {
     background-color: #c0392b;
   }
+
+  .dark .saveButton {
+    background-color: #34495e;
+  }
+  
+  .dark .deleteButton {
+    background-color: #34495e;
+  }
+
+  @media (max-width: 480px) {
+    .modalContent {
+        padding: 16px;
+        max-width: 90%;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+    }
+
+    .saveButton,
+    .cancelButton {
+        width: 100%;
+    }
+}

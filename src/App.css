@@ -9,8 +9,7 @@
   --border-dark: #34495e;
 }
 
-/* Apply global styles */
-body {
+html, body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: var(--background-light);
@@ -24,6 +23,10 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
+html.dark-mode{
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
 /* Utility classes */
 .flex-center {
   display: flex;

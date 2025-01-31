@@ -1,34 +1,67 @@
-import React, { useState } from 'react';
-import { useTheme } from '../context/ThemeContext'; // Adjust the import path as needed
-import styles from './AddNoteModal.module.css'; // Import CSS Module
+import React, { useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+import styles from './AddNoteModal.module.css';
 
-type AddNoteModalProps = {
-  isOpen: boolean; // Controls whether the modal is visible
-  onClose: () => void; // Function to close the modal
-  onAddNote: (title: string, content: string) => void; // Function to add a new note
+type Note = {
+  id: number;
+  title: string;
+  content: string;
+  date: string;
 };
 
-const AddNoteModal: React.FC<AddNoteModalProps> = ({ isOpen, onClose, onAddNote }) => {
-  const { theme } = useTheme(); // Get the current theme
+type AddNoteModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  onAddNote: (title: string, content: string) => void;
+  onUpdateNote: (id: number, title: string, content: string) => void;
+  editingNote: Note | null;
+};
+
+const AddNoteModal: React.FC<AddNoteModalProps> = ({
+  isOpen,
+  onClose,
+  onAddNote,
+  onUpdateNote,
+  editingNote
+}) => {
+  const { theme } = useTheme();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
+  useEffect(() => {
+    if (editingNote) {
+      setTitle(editingNote.title);
+      setContent(editingNote.content);
+    } else {
+      setTitle('');
+      setContent('');
+    }
+  }, [editingNote]);
+
   const handleSubmit = () => {
     if (title.trim() && content.trim()) {
-      onAddNote(title, content); // Call the onAddNote function
-      setTitle(''); // Reset title
-      setContent(''); // Reset content
-      onClose(); // Close the modal
+      if (editingNote) {
+        console.log("Updating note:", { id: editingNote.id, title, content });
+        onUpdateNote(editingNote.id, title, content);
+      } else {
+        console.log("Adding new note:", { title, content });
+        onAddNote(title, content);
+      }
+      setTitle('');
+      setContent('');
+      onClose();
+    } else {
+      console.log("Error: Title or content is empty.");
     }
   };
+  
 
-  // If the modal is not open, return null
   if (!isOpen) return null;
 
   return (
     <div className={styles.modalOverlay}>
       <div className={`${styles.modalContent} ${theme === 'dark' ? styles.dark : ''}`}>
-        <h2>Add New Note</h2>
+        <h2>{editingNote ? 'Edit Note' : 'Add New Note'}</h2>
         <input
           type="text"
           placeholder="Title"
@@ -44,7 +77,7 @@ const AddNoteModal: React.FC<AddNoteModalProps> = ({ isOpen, onClose, onAddNote 
         />
         <div className={styles.buttonContainer}>
           <button onClick={handleSubmit} className={styles.saveButton}>
-            Add Note
+            {editingNote ? 'Save' : 'Add Note'}
           </button>
           <button onClick={onClose} className={styles.cancelButton}>
             Cancel

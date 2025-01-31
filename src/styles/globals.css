@@ -18,7 +18,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode styles */
 body.dark-mode {
   background-color: var(--background-dark);
   color: var(--text-dark);

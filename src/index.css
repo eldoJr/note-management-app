@@ -1,0 +1,23 @@
+/* globals.css or index.css */
+:root {
+    --primary-color: #3498db;
+    --background-light: #ffffff;
+    --background-dark: #2c3e50;
+    --text-light: #333333;
+    --text-dark: #ffffff;
+    --border-light: #ddd;
+    --border-dark: #34495e;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+  }

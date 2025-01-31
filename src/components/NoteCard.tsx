@@ -12,9 +12,10 @@ type Note = {
 type NoteCardProps = {
   note: Note;
   onDelete: (id: number) => void;
+  onEdit: (note: Note) => void;
 };
 
-const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete }) => {
+const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete, onEdit }) => {
   const { theme } = useTheme();
 
   return (
@@ -22,7 +23,10 @@ const NoteCard: React.FC<NoteCardProps> = ({ note, onDelete }) => {
       <h3>{note.title}</h3>
       <p>{note.content}</p>
       <small>{note.date}</small>
-      <button onClick={() => onDelete(note.id)}>Delete</button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.editButton} onClick={() => onEdit(note)}>Edit</button>
+        <button className={styles.deleteButton} onClick={() => onDelete(note.id)}>Delete</button>
+      </div>
     </div>
   );
 };

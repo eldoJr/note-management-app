@@ -1,4 +1,5 @@
 .home {
+  min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -47,9 +48,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;
+    margin-bottom: 70px;
   }
+
+  .noNotesMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #888;
+    margin-top: 50px;
+}
+
   
-  /* Dark mode styles */
   .home.dark {
     background-color: var(--background-dark);
     color: var(--text-dark);
@@ -65,12 +75,12 @@
 
   @media (max-width: 600px) {
     .searchAndAddContainer {
-      flex-direction: column; /* Stack SearchBar and Add Note button vertically on small screens */
+      flex-direction: column; 
       gap: 8px;
     }
   
     .addNoteButton {
-      width: 100%; /* Full width on small screens */
-      max-width: none; /* Remove max-width restriction */
+      width: 100%; 
+      max-width: none; 
     }
   }

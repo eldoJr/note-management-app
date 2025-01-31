@@ -3,6 +3,7 @@ import { useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import './App.css';
+import './index.css'
 
 const App = () => {
   const { theme } = useTheme();

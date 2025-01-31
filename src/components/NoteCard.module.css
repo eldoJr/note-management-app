@@ -31,6 +31,43 @@
 .noteCard.dark small {
   color: #ccc;
 }
+.buttonContainer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.editButton {
+  background-color: #3498db; 
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #2980b9; 
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}
+
+.dark .editButton {
+  background-color: #34495e;
+}
+
+.dark .deleteButton {
+  background-color: #34495e;
+}
 
 .noteCard button {
   background-color: var(--primary-color);
