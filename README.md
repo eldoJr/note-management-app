@@ -8,26 +8,26 @@ A simple note-taking app built with React, TypeScript, and Vite. Features includ
 
 ## Preview:
 <h2>Light & Dark mode</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image01.jpg" alt="Image 1" style="width: 100%; height: auto;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image01.jpg" alt="Image 1" style="width: 30%; height: auto;">
   </div>
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image02.jpg" alt="Image 2" style="width: 100%; height: auto;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image02.jpg" alt="Image 2" style="width: 30%; height: auto;">
   </div>
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image03.jpg" alt="Image 3" style="width: 100%; height: auto;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image03.jpg" alt="Image 3" style="width: 30%; height: auto;">
   </div>
 </div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image1.jpg" alt="Image 4" style="width: 100%; height: auto;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image1.jpg" alt="Image 4" style="width: 30%; height: auto;">
   </div>
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image2.jpg" alt="Image 5" style="width: 100%; height: auto;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image2.jpg" alt="Image 5" style="width: 30%; height: auto;">
   </div>
-  <div style="width: 32%; margin-bottom: 10px;">
-    <img src="./src/assets/image3.jpg" alt="Image 6" style="width: 100%; height: auto;">
+  <div style="width: 32%;">
+    <img src="./src/assets/image3.jpg" alt="Image 6" style="width: 30%; height: auto;">
   </div>
 </div>
 
